@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "003a00ec-dfd7-4e28-a603-d578ea440d47",
+		"name": "ETH Fetcher test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5221820"
+	},
+	"item": [
+		{
+			"name": "Get Latest block",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/block"
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe Address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/subscribe/:address",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscribe",
+						":address"
+					],
+					"variable": [
+						{
+							"key": "address",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Address txs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/address/:address/tx",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address",
+						":address",
+						"tx"
+					],
+					"variable": [
+						{
+							"key": "address",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
